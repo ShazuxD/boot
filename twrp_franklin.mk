@@ -21,22 +21,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our PitchBlack configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/recovery/root,recovery/root)
-
-# Fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    android.hardware.fastboot@1.0-impl-mock.recovery
+# Inherit from JioSTB device
+$(call inherit-product, device/amlogic/franklin/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := franklin
-PRODUCT_NAME := omni_franklin
-PRODUCT_BRAND := ZTE
-PRODUCT_MODEL := B860Hv5
-PRODUCT_MANUFACTURER := ZTE
+PRODUCT_NAME := twrp_franklin
+PRODUCT_BRAND := Jio
+PRODUCT_MODEL := JioSTB
+PRODUCT_MANUFACTURER := Jio
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.security_patch=2099-12-31 
+    ro.vendor.build.security_patch=2099-12-31

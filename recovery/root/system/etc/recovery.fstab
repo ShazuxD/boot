@@ -8,12 +8,14 @@
 /dev/block/system       /system   ext4    defaults    defaults
 /dev/block/vendor       /vendor ext4    defaults    defaults
 /dev/block/odm          /odm    ext4    defaults    defaults
+/dev/block/odm_ext      /odm_ext    ext4    defaults    defaults
+/dev/block/oem          /oem    ext4    defaults    defaults
 /dev/block/param        /param    ext4    defaults    defaults
 /dev/block/product      /product    ext4    defaults    defaults
 /dev/block/metadata     /metadata    ext4    defaults    defaults
 /dev/block/tee          /tee    ext4    defaults    defaults
 /dev/block/cache        /cache  ext4    defaults    defaults
-/dev/block/data         /data   ext4    defaults    encryptable=footer
+/dev/block/data     /data   ext4    defaults    encryptable=footer
 /dev/block/mmcblk1p1    /sdcard vfat    defaults    defaults
 /dev/block/mmcblk1p2    /sdcard vfat    defaults    defaults
 /dev/block/mmcblk1p3    /sdcard vfat    defaults    defaults
@@ -27,4 +29,5 @@
 /dev/block/mmcblk2p5    /sdcard vfat    defaults    defaults
 /dev/block/mmcblk2p6    /sdcard vfat    defaults    defaults
 /dev/block/mmcblk    /sdcard vfat    defaults    defaults
-/dev/block/sd##         /udisk  auto    defaults    defaults
+#/dev/block/sd##         /udisk  auto    defaults    defaults
+/dev/block/sda          /sdcard vfat    defaults    defaults

@@ -14,6 +14,6 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_franklin.mk
+    $(LOCAL_DIR)/twrp_franklin.mk
 
-COMMON_LUNCH_CHOICES := omni_franklin-eng
+COMMON_LUNCH_CHOICES := twrp_franklin-eng
